@@ -1,7 +1,9 @@
 # Infected-Cells
 Classifying infected vs. uninfected malaria cells.
 
-I used a small CNN at first. When I tried a larger one it usually did not train as well. 
+CNN from scratch is just a 3 convolutional layer and 2 fully connected layer cnn. It is small but when I tried a larger one it didn't work as well. 
+
+I used a vgg16 model for transfer learning. I changed the output nodes to 2 and got 78% accuracy for testing and training. 
 
 ## Training
 
