@@ -9,7 +9,8 @@ import torch.optim as optim
 from torch.utils.data.sampler import SubsetRandomSampler
 
 #Getting test and train loaders
-train_data = datasets.ImageFolder(r'Drive/Data', transform=transforms.Compose([transforms.RandomResizedCrop(224),transforms.ToTensor()]))
+train_data = datasets.ImageFolder(r'Drive/Data', transform=transforms.Compose([transforms.RandomResizedCrop(224),transforms.ToTensor(),transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                 std=[0.229, 0.224, 0.225])]))
 #Getting length of data
 num_train = len(train_data)
 #Dividing data into train and test loop
